@@ -1,9 +1,3 @@
-// ! Declaração de variaveis
-// tipagem por inferencia
-// var nome; // Padrão antigo, evitem usar (variavel de escopo global)
-//  variaveis de escopo local
-// let resultado; // Let it change -> (variavel que pode mudar de valor)
-// const nome = 'Thiago'; // Constant -> (variavel que não vai mudar de valor)
 
 // function dataAtual() {
 //   alert(Date())
@@ -56,12 +50,9 @@ function validaEmail() {
 }
 
 function validaEmail2() {
-  // criação do padrão de email, vai aceitar caracteres + @ + caracteres + . + 2 ou 3 caracteres pra finalizar
   let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
   let txtEmail = document.querySelector('#txtEmail')
 
-  // o if será feito de uma forma diferente, verificando se o que a pessoa digitou condiz com o padrão do e-mail (match)
-  // caso de certo, e-mail válido, senão, e-mail inválido
   if(email.value.match(regex)) {
     txtEmail.innerHTML = 'E-mail válido'
     txtEmail.style.color = 'green'
@@ -77,7 +68,7 @@ function validaMensagem() {
   let txtMensagem = document.querySelector('#txtMensagem')
 
   if(mensagem.value.length >= 10) {
-    txtMensagem.innerHTML = 'Mensagem muito grande, da até preguiça de ler'
+    txtMensagem.innerHTML = 'Mensagem muito grande'
     txtMensagem.style.color = 'red'
     mensagemOk = false
   } else {
